@@ -1,7 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.dispatch import receiver
+from django.db.models import signals
+from django.conf import settings
+from rest_framework.authtoken.models import Token
 
 # Create your models here.
-
+class MyUserManager(BaseUserManager):
+    @receiver(signals.post_save, sender=settings.AUTH_USER_MODEL)
+    def create_auth_token(sender, instance=None, created=False, **kwargs):
+        if created:
+            Token.objects.create(user=instance)
 
 class Order(models.Model):
     Shops =[('tp', 'Tempo Kondela'),('ps', 'Posed')***REMOVED***

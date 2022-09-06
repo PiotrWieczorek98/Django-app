@@ -26,16 +26,18 @@
 ***REMOVED***
 
 ***REMOVED***
-SECRET_KEY = 'django-insecure-ah1iny8qkq5zj=yym!=!lze79895#9j&u8imm40jb=u2io5igc'
-
-***REMOVED***
 ***REMOVED***
 
 ***REMOVED***
+***REMOVED***
+
+***REMOVED***
 
 
 ***REMOVED***
 
+***REMOVED***
+***REMOVED***
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
@@ -89,13 +91,6 @@ SECRET_KEY = 'django-insecure-ah1iny8qkq5zj=yym!=!lze79895#9j&u8imm40jb=u2io5igc
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-# ***REMOVED***
-# ***REMOVED***
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-# ***REMOVED***
-# ***REMOVED***
-
 
 ***REMOVED***
 # ***REMOVED***#auth-password-validators
@@ -136,4 +131,10 @@ SECRET_KEY = 'django-insecure-ah1iny8qkq5zj=yym!=!lze79895#9j&u8imm40jb=u2io5igc
 ***REMOVED***
 # ***REMOVED***#default-auto-field
 
+***REMOVED***
+
+***REMOVED***
+    'DEFAULT_AUTHENTICATION_CLASSES': [ 'rest_framework.authentication.TokenAuthentication' ***REMOVED***,
+***REMOVED***
+***REMOVED***
 ***REMOVED***
