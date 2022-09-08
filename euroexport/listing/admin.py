@@ -10,10 +10,14 @@ class OrderAdmin(admin.ModelAdmin):
 @admin.register(OrderEntry)
 class OrderEntryAdmin(admin.ModelAdmin):
     list_display = ['id', 'route', 'orderId', 'productId', 'fabricId', 'amount', 'status'***REMOVED***
+    list_filter = ['route', 'status'***REMOVED***
+    search_fields = ['productId', 'route'***REMOVED***
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['id', 'family', 'name', 'price'***REMOVED***
+    list_display = ['id', 'family', 'name', 'price', 'ean'***REMOVED***
+    list_filter = ['family', 'name'***REMOVED***
+    search_fields = ['family', 'name'***REMOVED***
 
 @admin.register(Fabric)
 class FabricAdmin(admin.ModelAdmin):

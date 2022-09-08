@@ -2,19 +2,31 @@ version: "3.9"
 
 services:
   db:
-    image: postgres
+    container_name: database
+    image: postgres:alpine
     environment:
-      - POSTGRES_DB="${DB_NAME***REMOVED***"
-      - POSTGRES_USER="${DB_USER***REMOVED***"
-      - POSTGRES_PASSWORD="${DB_USER***REMOVED***"
+      - POSTGRES_DB=${DB_NAME***REMOVED***
+      - POSTGRES_USER=${DB_USER***REMOVED***
+      - POSTGRES_PASSWORD=${DB_PASSWORD***REMOVED***
     ports:
       - "5432:5432"
+    networks:
+      - djangoapp
   web:
+    container_name: backend
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code/
     ports:
       - "8000:8000"
     depends_on:
       - db
+    links:
+      - db:db
+    networks:
+      - djangoapp
+    command: python manage.py runserver 0.0.0.0:8000
+  
+networks:
+  djangoapp:
+      driver: bridge

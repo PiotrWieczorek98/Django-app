@@ -1,13 +1,16 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models import signals
 from django.conf import settings
 from rest_framework.authtoken.models import Token
 
 # Create your models here.
-class MyUserManager(BaseUserManager):
-    @receiver(signals.post_save, sender=settings.AUTH_USER_MODEL)
+class Account(User):
+    class Meta:
+        proxy = True
+
+    @receiver(signals.post_save, sender=User)
     def create_auth_token(sender, instance=None, created=False, **kwargs):
         if created:
             Token.objects.create(user=instance)
@@ -19,7 +22,7 @@ class Order(models.Model):
 
     shop = models.CharField(choices=Shops, max_length=20)
     orderType = models.CharField(choices=OrderType, default='cs', max_length=20)
-    number = models.CharField(max_length=50)
+    number = models.CharField(max_length=50, unique=True)
     received = models.DateField()
     informedProducer = models.DateField(null=True, blank=True)
     status = models.CharField(max_length=50, choices=Status, default='pd')
@@ -35,7 +38,7 @@ class Product(models.Model):
     price = models.IntegerField()
     configurationType = models.BooleanField(choices=ConfigurationType, default=False)
     configuration = models.CharField(max_length=50)
-    ean = models.CharField(max_length=13)
+    ean = models.CharField(max_length=13, unique=True)
 
     def __str__(self):
         return f'{self.family***REMOVED*** {self.name***REMOVED***'

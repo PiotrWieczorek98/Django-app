@@ -97,17 +97,17 @@
 
 ***REMOVED***
 ***REMOVED***
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+***REMOVED***
+    # ***REMOVED***,
 ***REMOVED***
 ***REMOVED***
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    # ***REMOVED***,
 ***REMOVED***
 ***REMOVED***
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # ***REMOVED***,
 ***REMOVED***
 ***REMOVED***
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-***REMOVED***
+    # ***REMOVED***,
 ***REMOVED***
 
 
