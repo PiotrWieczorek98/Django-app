@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('listing', '0004_product_family_alter_fabric_orderentryid_and_more'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.RemoveField(
@@ -29,4 +29,4 @@ class Migration(migrations.Migration):
             name='productId',
             field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, to='listing.product'),
         ),
-    ***REMOVED***
+    ]

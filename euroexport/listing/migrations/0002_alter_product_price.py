@@ -7,7 +7,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('listing', '0001_initial'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.AlterField(
@@ -15,4 +15,4 @@ class Migration(migrations.Migration):
             name='price',
             field=models.IntegerField(),
         ),
-    ***REMOVED***
+    ]

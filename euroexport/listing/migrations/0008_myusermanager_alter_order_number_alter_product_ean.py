@@ -9,22 +9,22 @@ class Migration(migrations.Migration):
     dependencies = [
         ('auth', '0012_alter_user_first_name_max_length'),
         ('listing', '0007_order_status'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.CreateModel(
             name='MyUserManager',
             fields=[
-            ***REMOVED***,
+            ],
             options={
                 'proxy': True,
-                'indexes': [***REMOVED***,
-                'constraints': [***REMOVED***,
-    ***REMOVED***
+                'indexes': [],
+                'constraints': [],
+            },
             bases=('auth.user',),
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
-            ***REMOVED***,
+            ],
         ),
         migrations.AlterField(
             model_name='order',
@@ -36,4 +36,4 @@ class Migration(migrations.Migration):
             name='ean',
             field=models.CharField(max_length=13, unique=True),
         ),
-    ***REMOVED***
+    ]

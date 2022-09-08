@@ -7,7 +7,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('listing', '0005_remove_fabric_orderentryid_and_more'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.AlterField(
@@ -15,4 +15,4 @@ class Migration(migrations.Migration):
             name='informedProducer',
             field=models.DateField(blank=True, null=True),
         ),
-    ***REMOVED***
+    ]

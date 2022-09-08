@@ -46,7 +46,7 @@ out/
 atlassian-ide-plugin.xml
 
 # Python # 
-*.py[cod***REMOVED*** 
+*.py[cod] 
 *$py.class 
 
 # Distribution / packaging 

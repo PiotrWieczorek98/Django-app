@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.CreateModel(
@@ -18,16 +18,16 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
                 ('price', models.IntegerField(max_length=5)),
-                ('configurationType', models.BooleanField(choices=[(False, 'Regular'), (True, 'Custom')***REMOVED***, default=False)),
+                ('configurationType', models.BooleanField(choices=[(False, 'Regular'), (True, 'Custom')], default=False)),
                 ('configuration', models.CharField(max_length=50)),
                 ('ean', models.CharField(max_length=13)),
-            ***REMOVED***,
+            ],
         ),
         migrations.CreateModel(
             name='OrderEntry',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('productID', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='listing.product')),
-            ***REMOVED***,
+            ],
         ),
-    ***REMOVED***
+    ]

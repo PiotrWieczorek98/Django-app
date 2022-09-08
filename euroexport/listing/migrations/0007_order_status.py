@@ -7,12 +7,12 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('listing', '0006_alter_order_informedproducer'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.AddField(
             model_name='order',
             name='status',
-            field=models.CharField(choices=[('pd', 'Pending'), ('ct', 'Complited')***REMOVED***, default='pd', max_length=50),
+            field=models.CharField(choices=[('pd', 'Pending'), ('ct', 'Complited')], default='pd', max_length=50),
         ),
-    ***REMOVED***
+    ]

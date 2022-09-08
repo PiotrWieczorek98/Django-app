@@ -5,14 +5,14 @@ from rest_framework import  serializers
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups'***REMOVED***
+        fields = ['url', 'username', 'email', 'groups']
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
-        fields = ['url', 'name'***REMOVED***
+        fields = ['url', 'name']
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order
-        fields = ['shop', 'orderType', 'number', 'received', 'informedProducer', 'status'***REMOVED***
+        fields = ['shop', 'orderType', 'number', 'received', 'informedProducer', 'status']

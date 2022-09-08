@@ -1,12 +1,12 @@
-[[source***REMOVED******REMOVED***
+[[source]]
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
-[packages***REMOVED***
+[packages]
 django = "*"
 
-[dev-packages***REMOVED***
+[dev-packages]
 
-[requires***REMOVED***
+[requires]
 python_version = "3.9"

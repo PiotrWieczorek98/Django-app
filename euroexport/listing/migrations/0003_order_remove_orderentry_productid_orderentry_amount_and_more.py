@@ -8,19 +8,19 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('listing', '0002_alter_product_price'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.CreateModel(
             name='Order',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('shop', models.CharField(choices=[('tp', 'Tempo Kondela'), ('ps', 'Posed')***REMOVED***, max_length=20)),
-                ('orderType', models.CharField(choices=[('cs', 'Customer'), ('st', 'Storage'), ('cp', 'Complaint')***REMOVED***, default='cs', max_length=20)),
+                ('shop', models.CharField(choices=[('tp', 'Tempo Kondela'), ('ps', 'Posed')], max_length=20)),
+                ('orderType', models.CharField(choices=[('cs', 'Customer'), ('st', 'Storage'), ('cp', 'Complaint')], default='cs', max_length=20)),
                 ('number', models.CharField(max_length=50)),
                 ('received', models.DateField()),
                 ('informedProducer', models.DateField()),
-            ***REMOVED***,
+            ],
         ),
         migrations.RemoveField(
             model_name='orderentry',
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='orderentry',
             name='status',
-            field=models.CharField(choices=[('st', 'Sent'), ('ip', 'In production'), ('cc', 'Canceled'), ('rt', 'Returned')***REMOVED***, default='ip', max_length=20),
+            field=models.CharField(choices=[('st', 'Sent'), ('ip', 'In production'), ('cc', 'Canceled'), ('rt', 'Returned')], default='ip', max_length=20),
         ),
         migrations.AddField(
             model_name='product',
@@ -68,9 +68,9 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
                 ('number', models.SmallIntegerField()),
-                ('group', models.CharField(choices=[('1', 'First'), ('2', 'Second'), ('3', 'Third')***REMOVED***, default='1', max_length=10)),
+                ('group', models.CharField(choices=[('1', 'First'), ('2', 'Second'), ('3', 'Third')], default='1', max_length=10)),
                 ('orderEntryId', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='listing.orderentry')),
-            ***REMOVED***,
+            ],
         ),
         migrations.AddField(
             model_name='orderentry',
@@ -78,4 +78,4 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='listing.order'),
             preserve_default=False,
         ),
-    ***REMOVED***
+    ]

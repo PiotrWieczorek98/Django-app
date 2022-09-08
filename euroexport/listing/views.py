@@ -8,7 +8,7 @@ from .serializers import UserSerializer, GroupSerializer, OrderSerializer
 
 # API endpoints that allows users to be viewed or edited.
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated***REMOVED***
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
@@ -19,15 +19,15 @@ class UserViewSet(viewsets.ModelViewSet):
         self.perform_create(serializer)
         data = serializer.data
         headers = self.get_success_headers(data)
-        data['token'***REMOVED*** = Token.objects.get(user=account).key
+        data['token'] = Token.objects.get(user=account).key
         return Response(data, headers=headers)
 
 class GroupViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated***REMOVED***
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = GroupSerializer
     queryset = Group.objects.all()
 
 class OrderViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated***REMOVED***
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = OrderSerializer
     queryset = Order.objects.all()

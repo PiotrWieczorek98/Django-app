@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ('auth', '0012_alter_user_first_name_max_length'),
         ('listing', '0008_myusermanager_alter_order_number_alter_product_ean'),
-    ***REMOVED***
+    ]
 
     operations = [
         migrations.DeleteModel(
@@ -18,15 +18,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Account',
             fields=[
-            ***REMOVED***,
+            ],
             options={
                 'proxy': True,
-                'indexes': [***REMOVED***,
-                'constraints': [***REMOVED***,
-    ***REMOVED***
+                'indexes': [],
+                'constraints': [],
+            },
             bases=('auth.user',),
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),
-            ***REMOVED***,
+            ],
         ),
-    ***REMOVED***
+    ]
