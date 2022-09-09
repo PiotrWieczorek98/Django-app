@@ -1,6 +1,7 @@
 from rest_framework import routers
 from django.urls import path, include
 from .views import UserViewSet, GroupViewSet, OrderViewSet
+from rest_framework.authtoken.views import obtain_auth_token
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
